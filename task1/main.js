@@ -1,5 +1,4 @@
 let x = prompt("Please enter first value");
-let opreator = prompt('opretor pls')
 let y = prompt("Please enter your second");
 
 
