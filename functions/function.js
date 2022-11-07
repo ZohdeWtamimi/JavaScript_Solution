@@ -9,6 +9,8 @@ outputs your fortune to the screen like so:
 Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
 => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
 */
+//          solution
+
 // function tellFortune(x,y,z,n){
 //     let sen =`You will be a ${x} in ${y}, and married to ${z} with ${n} kids.`
 //     console.log(sen)
@@ -28,6 +30,8 @@ outputs the result to the screen like so:
 Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
+//          solution
+
 // function calculateDogAge(dogAge){
 //     let age = 7 * dogAge;
 //     console.log(age)
@@ -44,6 +48,8 @@ outputs the result to the screen like so:
 Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
+//          solution
+
 // function calculateSupply(age, amountPerDay){
 //     ageLeft = 100 - age 
 //     ageInDays = ageLeft * 365
@@ -63,6 +69,8 @@ and it will return hello + name
 Ex: greet("Adam")
 => "Hello Adam"
 */
+//          solution
+
 // function greet(name){
 //     console.log('hello ' + name);
 // }
@@ -126,6 +134,8 @@ accept 1 parameter and calculate the cube of this number
 Ex: cube(4)
 => 64
 */
+//          solution
+
 // function cube(x){
 //     console.log(Math.pow(x, 3))
 // }
@@ -141,6 +151,8 @@ Ex: multiply(3,4)
 Ex: multiply(5,4)
 => 20
 */
+//          solution
+
 // function multiply(x, y){
 //     return x * y
 // }
@@ -163,6 +175,8 @@ Ex: canIGetADrivingLicense(20)
 => "yes you can"
 
 */
+//          solution
+
 // function canIGetADrivingLicense(age){
 //     if(age >= 20){
 //         console.log('yes you can')
@@ -188,6 +202,7 @@ Ex: sameLength("tree","clue")
 Ex: sameLength("tree","car")
 => false
 */
+//          solution
 
 // function sameLength(str1, str2){
 //     let result = str1.length - str2.length
