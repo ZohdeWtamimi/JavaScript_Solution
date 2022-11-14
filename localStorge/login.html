@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label>first name: <input type="text" id="logName" /></label>
+        <label>password: <input type="password" id="password" /></label>
+        <br /><br />
+        <button type="submit">submit</button>
+      </form>
+      <p id="log"></p>
+
+
+      <script>
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        console.log(users)
+        function logSubmit(event) {
+            console.log('hello from submit')
+            let compareName = logName.value 
+            let comparePass = password.value
+            // console.log(compareName, comparePass)
+            // console.log(users)
+            users.map(e => {
+                if(e.name === compareName && e.password == comparePass){
+                    console.log(`Welcome ${e.name}`)
+                    log.textContent = `Welcome ${e.name}`
+                }
+            })
+            
+
+        event.preventDefault();
+        }
+        const log = document.getElementById('log')
+        const logName = document.getElementById('logName')
+        const password = document.getElementById('password')
+        const form = document.getElementById('form');
+        form.addEventListener('submit', logSubmit);
+    </script>
+</body>
+</html>
