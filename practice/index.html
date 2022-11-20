@@ -6,31 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        #form{
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div class="v">hello</div>
-    <div>svdvd</div>
-    <div>vsdvds</div>
+    
+    <!-- <form id="form">
+        <label>first name: <input type="text" id="fname" /></label>
+        <label>last name: <input type="text" id="lname" /></label>
+        <label>email: <input type="email" id="email" /></label>
+        <label>num: <input type="number" id="num" /></label>
+        <label>password: <input type="password" id="password" /></label>
+        <label>password confirmation: <input type="password" id="conPass" /></label>
+        <br /><br />
+        <button type="submit">submit</button>
+      </form> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+      <!-- #form{
+        display : none
+      } -->
+      <!-- html -->
+      <form id="form" action="">
+        <input type="text" id="input">
+        <button type="submit">sub</button>
+      </form>
+      <h3 id="h3">hello</h3>
     <script>
+        // javascript
+        let form = document.getElementById('form')
+        let inp = document.getElementById('input')
+        let h3 = document.getElementById('h3')
+        h3.addEventListener('click', (e)=>{
+            e.preventDefault();
+            form.style.display = 'block'
+            h3.style.display = 'none'
+        })
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            h3.style.display = 'block'
+            h3.innerHTML =  inp.value
+            form.style.display = 'none'
 
-     const numbers = [65, 44, 12, 4];
-        numbers.forEach(myFunction)
-        function myFunction(item, index, arr) {
-        arr[index] = item * 10;
-        }
-        console.log(numbers)
+        })
+        
 
+        // let users = JSON.parse(localStorage.getItem("users")) || [];
+        
+        // function logSubmit(event) {
+        //     let obj = {
+        //         name: fname.value,
+        //         last: lname.value,
+        //         email: email.value,
+        //         num: num.value,
+        //         password: password.value,
+        //         confirmtionPass: conPass.value
+        //     }
+        //     users.push(obj)
+            
+        //     console.log(users)
+        //     localStorage.setItem("users", JSON.stringify(users));
 
-        let arr =["Tabark","Walaa","nour"];
-
-        arr.forEach(sayHi);
-        function sayHi(item){
-            console.log("Hi "  + item +  " How are you?") 
-        }
-
-
+        // event.preventDefault();
+        // }
+        // const fname = document.getElementById('fname')
+        // const lname = document.getElementById('lname')
+        // const email = document.getElementById('email')
+        // const num = document.getElementById('num')
+        // const password = document.getElementById('password')
+        // const conPass = document.getElementById('conPass')
+        // const form = document.getElementById('form');
+        // form.addEventListener('submit', logSubmit);
     </script>
 </body>
 </html>

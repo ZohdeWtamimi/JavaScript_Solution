@@ -9,8 +9,8 @@
 <body>
     
     <form id="form">
-        <label>first name: <input type="text" id="take" /></label>
-        <label>password: <input type="password" id="password" /></label>
+        <label>first name: <input type="text" id="take" onchange="myFunction()" /></label>
+        <label>password: <input type="password" id="password" onchange="myFunction()" /></label>
         <br /><br />
         <a href="./login.html">Do you have account?</a><br><br>
         <button type="submit">submit</button>
@@ -18,7 +18,6 @@
 
     <script>
         let users = JSON.parse(localStorage.getItem("users")) || [];
-        
         function logSubmit(event) {
             let obj = {name: take.value, password: password.value}
             users.push(obj)
@@ -28,10 +27,31 @@
 
         event.preventDefault();
         }
+
+        function myFunction() {
+            console.log('helo')
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+        }
         const take = document.getElementById('take')
         const password = document.getElementById('password')
         const form = document.getElementById('form');
+        const input = document.querySelector('input')
         form.addEventListener('submit', logSubmit);
+        
+        console.log(input.id)
+        function myFunction(){
+            var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            
+            console.log(regName.test('svdv'))
+            console.log(regName)
+            if(!regName.test(input.value)){
+                alert('Invalid name given.');
+            }else{
+                alert('Valid name given.');
+            }
+        }
+        
     </script>
 </body>
 </html>

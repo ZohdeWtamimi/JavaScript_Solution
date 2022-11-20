@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
+    
+</head>
+<body>
+    <div class="containerZohde">
+        <div class="addUser">
+            <h2>Add Student</h2>
+            <p><button class="addUser"><i class="fa-solid fa-square-plus"></i></button></p>
+        </div>
+        <form class="addUserform" id="form">
+            <input placeholder="firstname" type="text" id="first" />
+            <input placeholder="lastname" type="text" id="last" />
+            <button type="submit">submit</button>
+        </form>
+    
+        <div class="display"></div>
+        <div id="parent">
+            
+        </div>
+        <div id="box">
+            <div class="containerBox">
+                <div class="arrowLeft"><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="rowBox">
+                    
+                </div>
+                <div class="arrowRight"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div class="btns">
+                <button id="abcanseBtn">Absance</button>
+                <button id="assignBtn">assignment</button>
+            </div>
+            <div class="divsionContent">
+                <div class="section1">
+                    <h3 class="month">absence in this month</h3>
+                    <div class="calender"></div>
+                </div>
+    
+                <!-- <div class="section2">
+                    <div class="addAssign">
+                        <h4>Assigment</h4>
+                        <form id="assignForm" action="">
+                            <input id="assign" type="text">
+                            <button type="submit">add</button>
+                        </form>
+                    </div>
+                    <div class="assignment">
+                        
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    
+        <div id="feedback">
+            <form id="feedbackFrom" action="">
+                <input type="text" class="feedbackInput" placeholder="add Feedback">
+                <button type="submit">Add</button>
+            </form>
+            <div id="dispalyFeedback"></div>
+        </div>
+        <div id="feedbackDisappear"></div>
+
+        <button class="summary">Summary</button>
+        <div id="fixed">
+                <!-- <h1>Absance Summary</h1>
+                <h4>date</h4>
+            <div class="fixedCon">
+                <p>number : <span>${}</span></p>
+                <h3>name : <span>${}</span></h3>
+                <h3>abcanse : <span>${}</span></h3>
+            </div> -->
+        </div>
+        <div id="disappear"></div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
